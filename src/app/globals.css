@@ -1,0 +1,318 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222 47% 8%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 8%;
+    --primary: 252 91% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 47% 8%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 199 89% 48%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 252 91% 53%;
+    --chart-1: 252 91% 53%;
+    --chart-2: 199 89% 48%;
+    --chart-3: 142 76% 36%;
+    --chart-4: 38 92% 50%;
+    --chart-5: 330 81% 60%;
+    --radius: 0.75rem;
+
+    /* Society-specific colors */
+    --society-dormant: 215 16% 47%;
+    --society-active: 252 91% 53%;
+    --society-relationship: 199 89% 48%;
+    --society-circle: 142 76% 36%;
+    --society-inference: 38 92% 50%;
+    --society-god: 262 83% 58%;
+  }
+
+  .dark {
+    --background: 222 47% 4%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 6%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 6%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 252 91% 58%;
+    --primary-foreground: 222 47% 4%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 199 89% 52%;
+    --accent-foreground: 222 47% 4%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 252 91% 58%;
+    --chart-1: 252 91% 58%;
+    --chart-2: 199 89% 52%;
+    --chart-3: 142 76% 42%;
+    --chart-4: 38 92% 55%;
+    --chart-5: 330 81% 65%;
+
+    --society-dormant: 215 20% 55%;
+    --society-active: 252 91% 58%;
+    --society-relationship: 199 89% 52%;
+    --society-circle: 142 76% 42%;
+    --society-inference: 38 92% 55%;
+    --society-god: 262 83% 62%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-16 sm:py-24 lg:py-32;
+  }
+
+  .section-sm {
+    @apply py-12 sm:py-16 lg:py-20;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary via-accent to-[hsl(var(--society-god))] bg-clip-text text-transparent;
+  }
+
+  .glass {
+    @apply bg-white/5 dark:bg-black/5 backdrop-blur-md border border-white/10 dark:border-white/5;
+  }
+
+  .glass-strong {
+    @apply bg-white/10 dark:bg-black/10 backdrop-blur-lg border border-white/20 dark:border-white/10;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary text-primary-foreground hover:bg-primary/90 shadow-glow;
+  }
+
+  .btn-secondary {
+    @apply btn bg-secondary text-secondary-foreground hover:bg-secondary/80;
+  }
+
+  .btn-outline {
+    @apply btn border border-input bg-transparent hover:bg-accent hover:text-accent-foreground;
+  }
+
+  .btn-ghost {
+    @apply btn bg-transparent hover:bg-accent hover:text-accent-foreground;
+  }
+
+  .btn-destructive {
+    @apply btn bg-destructive text-destructive-foreground hover:bg-destructive/90;
+  }
+
+  .link {
+    @apply text-sm font-medium text-primary hover:text-primary/80 underline-offset-2 hover:underline transition-colors;
+  }
+
+  .card {
+    @apply rounded-xl border bg-card text-card-foreground shadow-elevation-1 transition-all duration-300 hover:shadow-elevation-2;
+  }
+
+  .card-hover {
+    @apply card hover:border-primary/30 hover:shadow-glow;
+  }
+
+  .input {
+    @apply flex h-10 w-full rounded-lg border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .label {
+    @apply text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-medium transition-colors;
+  }
+
+  .badge-primary {
+    @apply badge border-primary/30 bg-primary/10 text-primary;
+  }
+
+  .badge-secondary {
+    @apply badge border-secondary/30 bg-secondary/10 text-secondary-foreground;
+  }
+
+  .badge-accent {
+    @apply badge border-accent/30 bg-accent/10 text-accent;
+  }
+
+  .badge-success {
+    @apply badge border-[hsl(var(--chart-3))]/30 bg-[hsl(var(--chart-3))]/10 text-[hsl(var(--chart-3))];
+  }
+
+  .badge-warning {
+    @apply badge border-[hsl(var(--chart-4))]/30 bg-[hsl(var(--chart-4))]/10 text-[hsl(var(--chart-4))];
+  }
+
+  .badge-destructive {
+    @apply badge border-destructive/30 bg-destructive/10 text-destructive;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .prose-custom {
+    @apply text-muted-foreground;
+  }
+
+  .prose-custom h1 {
+    @apply text-display-sm font-bold text-foreground mb-4;
+  }
+
+  .prose-custom h2 {
+    @apply text-heading-lg font-semibold text-foreground mb-3 mt-8;
+  }
+
+  .prose-custom h3 {
+    @apply text-heading-md font-semibold text-foreground mb-2 mt-6;
+  }
+
+  .prose-custom p {
+    @apply mb-4 leading-relaxed;
+  }
+
+  .prose-custom ul {
+    @apply list-disc list-inside mb-4 space-y-2;
+  }
+
+  .prose-custom ol {
+    @apply list-decimal list-inside mb-4 space-y-2;
+  }
+
+  .prose-custom code {
+    @apply rounded bg-muted px-1.5 py-0.5 text-sm font-mono text-primary;
+  }
+
+  .prose-custom pre {
+    @apply rounded-lg bg-muted p-4 overflow-x-auto mb-4;
+  }
+
+  .prose-custom pre code {
+    @apply bg-transparent p-0 text-sm;
+  }
+
+  .prose-custom a {
+    @apply text-primary hover:underline;
+  }
+
+  .prose-custom blockquote {
+    @apply border-l-4 border-primary pl-4 italic text-muted-foreground my-4;
+  }
+}
+
+@layer utilities {
+  .animation-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animation-delay-500 {
+    animation-delay: 500ms;
+  }
+
+  .animation-delay-700 {
+    animation-delay: 700ms;
+  }
+
+  .animation-delay-1000 {
+    animation-delay: 1000ms;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary via-accent to-[hsl(var(--society-god))] bg-clip-text text-transparent;
+  }
+
+  .bg-grid {
+    background-image: linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px), linear-gradient(to bottom, hsl(var(--border)) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .bg-dot {
+    background-image: radial-gradient(hsl(var(--border)) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .mask-fade-bottom {
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  }
+
+  .mask-fade-top {
+    mask-image: linear-gradient(to top, black 70%, transparent 100%);
+  }
+}
