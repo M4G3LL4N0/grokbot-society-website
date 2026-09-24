@@ -2,6 +2,8 @@
 
 Public website for [GrokBot Society](https://github.com/M4G3LL4N0/grokbot-society), a provider-neutral runtime for persistent synthetic people, roles, relationships, circles, and bounded social intelligence.
 
+Production: [https://grokbot-society.vercel.app](https://grokbot-society.vercel.app)
+
 The default runtime and website experience use zero-cost deterministic providers. No paid Grok, ChatGPT, or GrokBot inference is connected.
 
 ## Stack
