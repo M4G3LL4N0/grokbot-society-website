@@ -21,7 +21,7 @@ pnpm dev
 
 Open `http://localhost:3000`.
 
-`pnpm dev` uses Webpack for reliable local development. `pnpm dev:turbo` remains available for explicit Turbopack testing.
+`pnpm dev` and `pnpm build` use Webpack for reliable Node 22 and local development. `pnpm dev:turbo` and `pnpm build:turbo` remain available for explicit Turbopack testing.
 
 ## Verification
 
