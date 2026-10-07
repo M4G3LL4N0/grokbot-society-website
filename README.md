@@ -82,3 +82,103 @@ Vercel can deploy the repository directly with the default Next.js settings. Set
 ## License
 
 Apache-2.0. See `LICENSE`.
+
+<!-- TRILLIONX:presentation:begin -->
+
+### Animated surfaces
+
+Generated from this repository's own source tree: every count, route and module below was measured, not written by hand.
+
+#### Identity
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/grokbot-society-website/main/.github-art/surfaces/hero-reduced.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/grokbot-society-website/main/.github-art/surfaces/hero-light.svg">
+  <img alt="Identity diagram for grokbot-society-website" src="https://raw.githubusercontent.com/M4G3LL4N0/grokbot-society-website/main/.github-art/surfaces/hero.svg">
+</picture>
+
+#### Modules
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/grokbot-society-website/main/.github-art/surfaces/architecture-reduced.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/grokbot-society-website/main/.github-art/surfaces/architecture-light.svg">
+  <img alt="Modules diagram for grokbot-society-website" src="https://raw.githubusercontent.com/M4G3LL4N0/grokbot-society-website/main/.github-art/surfaces/architecture.svg">
+</picture>
+
+#### Routes
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/grokbot-society-website/main/.github-art/surfaces/data_flow-reduced.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/grokbot-society-website/main/.github-art/surfaces/data_flow-light.svg">
+  <img alt="Routes diagram for grokbot-society-website" src="https://raw.githubusercontent.com/M4G3LL4N0/grokbot-society-website/main/.github-art/surfaces/data_flow.svg">
+</picture>
+
+#### Primitives
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/grokbot-society-website/main/.github-art/surfaces/state_machine-reduced.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/grokbot-society-website/main/.github-art/surfaces/state_machine-light.svg">
+  <img alt="Primitives diagram for grokbot-society-website" src="https://raw.githubusercontent.com/M4G3LL4N0/grokbot-society-website/main/.github-art/surfaces/state_machine.svg">
+</picture>
+
+#### Composition
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/grokbot-society-website/main/.github-art/surfaces/component_map-reduced.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/grokbot-society-website/main/.github-art/surfaces/component_map-light.svg">
+  <img alt="Composition diagram for grokbot-society-website" src="https://raw.githubusercontent.com/M4G3LL4N0/grokbot-society-website/main/.github-art/surfaces/component_map.svg">
+</picture>
+
+#### Build and tests
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/grokbot-society-website/main/.github-art/surfaces/build-reduced.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/grokbot-society-website/main/.github-art/surfaces/build-light.svg">
+  <img alt="Build and tests diagram for grokbot-society-website" src="https://raw.githubusercontent.com/M4G3LL4N0/grokbot-society-website/main/.github-art/surfaces/build.svg">
+</picture>
+
+#### Workflow
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/grokbot-society-website/main/.github-art/surfaces/workflow-reduced.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/grokbot-society-website/main/.github-art/surfaces/workflow-light.svg">
+  <img alt="Workflow diagram for grokbot-society-website" src="https://raw.githubusercontent.com/M4G3LL4N0/grokbot-society-website/main/.github-art/surfaces/workflow.svg">
+</picture>
+
+#### Domain
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/grokbot-society-website/main/.github-art/surfaces/domain-reduced.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/grokbot-society-website/main/.github-art/surfaces/domain-light.svg">
+  <img alt="Domain diagram for grokbot-society-website" src="https://raw.githubusercontent.com/M4G3LL4N0/grokbot-society-website/main/.github-art/surfaces/domain.svg">
+</picture>
+
+#### Identity object
+
+<picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/grokbot-society-website/main/.github-art/surfaces/footer-reduced.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/M4G3LL4N0/grokbot-society-website/main/.github-art/surfaces/footer-light.svg">
+  <img alt="Identity object diagram for grokbot-society-website" src="https://raw.githubusercontent.com/M4G3LL4N0/grokbot-society-website/main/.github-art/surfaces/footer.svg">
+</picture>
+
+<!-- TRILLIONX:presentation:end -->
+
+<!-- TRILLIONX:evidence:begin -->
+
+## What is measurable here
+
+Generated by `.github-art` from the source tree at publish time.
+
+| Signal | Value |
+| --- | --- |
+| HTTP routes | 15 |
+| Entry points | 0 |
+| Module roots | 1 |
+| Test files | 1 |
+| CI workflows | 1 |
+| Distinctive stack | scaffold only |
+| Status | TESTED |
+| Evidence confidence | E3 |
+| Animated surfaces | 9 |
+
+<!-- TRILLIONX:evidence:end -->
